@@ -2,11 +2,10 @@ FROM pyd4vinci/scrapling:latest
 
 WORKDIR /app
 
-# Copy everything needed for install
-COPY pyproject.toml .
-COPY app/ app/
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install --no-cache-dir .
+COPY app/ app/
 
 EXPOSE 8000
 

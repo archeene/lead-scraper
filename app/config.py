@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     wl_business_id: str = "697216"
     wl_location_id: str = "453099"
 
+    # Supabase (VAP App, for booking_requests logging)
+    supabase_url: str = ""
+    supabase_service_key: str = ""
+
     # Staleness threshold (days since last contact to count as "stale")
     stale_days: int = 30
 
